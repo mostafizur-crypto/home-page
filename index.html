@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="http://MY-CDN.example.com/favicon.ico" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="./img/alarado-icon-homepage.svg" alt="">
+        </div>
+        <div class="about">
+            <li>About us</li>
+            <li>Product</li>
+            <li>Resource</li>
+            <li>Contact</li>
+        </div>
+           <div class="moon">
+           <label id="dark-change"><img src="./img/Moon_fill_light.svg" alt=""></label> 
+           </div>
+           <div>
+            <li class="menu_button" onclick=showSidebar()><i class="fa-solid fa-bars"></i></li>
+           </div>
+         
+    </nav>
+      <!-- Sidebar Start -->
+    <div class="sidebar">
+        <li li onclick=hideSidebar()><i class="fa-solid fa-xmark"></i></li>
+        <li><a href="">About us</a></li>
+        <li><a href="">Product</a></li>
+        <li><a href="">Resource</a></li>
+        <li><a href="">Contact</a></li>
+        </div>
+</header>
+<!-- header End  -->
+
+<!-- main Section Start -->
+
+<main>
+      <div class="container">
+        <div class="first_half">
+            <div>
+                <h5>😎 SIMPLE WAY TO COMMUNICATE</h5>
+            </div>
+            <div>
+                <h1>Actions for accessibility in Design</h1>
+            </div>
+            <div>
+                 <p id="p">The fastest way to build and deploy websites with resusable components</p>
+            </div>
+            <div class="link">
+                <a href="#" id="button">GET STARTED</a>
+                <a href="#">Get live demo</a>
+             </div>
+            
+            
+            <br>
+            <div class="small_tag">
+            <small><i class="fa-solid fa-circle-check" style="color: #098d66;"></i> No credit card required</small>
+            <small><i class="fa-solid fa-circle-check" style="color: #098d66;"></i> No software to install</small>
+            </div>
+            
+        </div>
+        <div class="photo_section">
+            <img src="./img/hero-image-simple-homepage.png" alt="">
+        </div>
+      </div>
+    
+</main>
+
+<script>
+    var content = document.getElementsByTagName('body')[0];
+    var darkMode = document.getElementById('dark-change');
+    darkMode.addEventListener('click', function(){
+        darkMode.classList.toggle('active');
+        content.classList.toggle('night');
+    })
+</script>
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+</script>
+</body>
+</html>
